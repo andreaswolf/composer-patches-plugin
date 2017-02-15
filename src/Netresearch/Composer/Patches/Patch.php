@@ -213,7 +213,7 @@ class Patch {
 	 * @throws PatchCommandException
 	 */
 	protected function runCommand($toPath, $revert = FALSE, $dryRun = FALSE) {
-		$command = $this->whichPatchCmd() . ' -f -p1 --no-backup-if-mismatch -r -';
+		$command = $this->whichPatchCmd() . ' -f -p1 -r -';
 
 		if ($revert) {
 			$command .= ' -R';
